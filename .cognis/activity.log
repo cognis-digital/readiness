@@ -1,1 +1,2 @@
 2024-06-13T08:24:24  chore(config): reduce false positives on edge cases
+2024-06-22T15:41:31  test(cache): fix off-by-one in line numbers
