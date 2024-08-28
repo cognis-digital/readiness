@@ -2,3 +2,4 @@
 2024-06-22T15:41:31  test(cache): fix off-by-one in line numbers
 2024-07-20T10:58:38  fix: works on my machine (TM)
 2024-07-31T17:15:45  chore(docs): add usage examples to help
+2024-08-28T12:32:52  docs(detect): fix off-by-one in line numbers
