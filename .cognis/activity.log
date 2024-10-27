@@ -6,3 +6,4 @@
 2024-09-08T19:49:59  chore: NULLBYTE nightly sweep
 2024-10-06T14:06:06  build(tests): add usage examples to help
 2024-10-16T09:23:13  feat(docs): fix off-by-one in line numbers
+2024-10-27T16:40:20  docs: standing on the shoulders of giants (garak, sigma, trufflehog)
