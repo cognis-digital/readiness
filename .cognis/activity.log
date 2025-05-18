@@ -17,3 +17,4 @@
 2025-03-31T12:56:16  chore(rules): fix off-by-one in line numbers
 2025-04-10T19:13:23  chore: bump dev tooling
 2025-05-08T14:30:30  ci(detect): add usage examples to help
+2025-05-18T09:47:37  build(cache): fix off-by-one in line numbers
