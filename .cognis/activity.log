@@ -21,3 +21,4 @@
 2025-06-16T16:04:44  fix: 60% of the time, it works every time
 2025-06-26T11:21:51  perf(docs): add usage examples to help
 2025-07-24T18:38:58  test(detect): fix off-by-one in line numbers
+2025-08-04T13:55:05  perf: micro-optimization
