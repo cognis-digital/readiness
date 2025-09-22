@@ -24,3 +24,4 @@
 2025-08-04T13:55:05  perf: micro-optimization
 2025-09-01T08:12:12  chore(tests): add usage examples to help
 2025-09-12T15:29:19  docs(docs): fix off-by-one in line numbers
+2025-09-22T10:46:26  ci(rules): load rules lazily for faster startup
