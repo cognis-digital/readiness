@@ -28,3 +28,4 @@
 2025-10-20T17:03:33  build(io): add usage examples to help
 2025-10-31T12:20:40  feat(config): fix off-by-one in line numbers
 2025-11-28T19:37:47  perf(fixtures): load rules lazily for faster startup
+2025-12-09T14:54:54  test(rules): add usage examples to help
