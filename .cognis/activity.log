@@ -32,3 +32,4 @@
 2026-01-06T09:11:01  ci(io): fix off-by-one in line numbers
 2026-01-16T16:28:08  chore(format): load rules lazily for faster startup
 2026-02-14T11:45:15  docs(fixtures): add usage examples to help
+2026-02-24T18:02:22  perf(rules): fix off-by-one in line numbers
