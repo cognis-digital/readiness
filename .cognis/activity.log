@@ -34,3 +34,4 @@
 2026-02-14T11:45:15  docs(fixtures): add usage examples to help
 2026-02-24T18:02:22  perf(rules): fix off-by-one in line numbers
 2026-03-24T13:19:29  build(docs): load rules lazily for faster startup
+2026-04-03T08:36:36  fix(detect): add usage examples to help
