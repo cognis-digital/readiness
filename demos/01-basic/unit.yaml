@@ -1,0 +1,15 @@
+# Notional unit readiness input (SORTS-style, defensive/analytical only)
+unit: 2-7 CAV (notional)
+
+personnel:
+  assigned: 540
+  required: 600
+
+equipment:
+  authorized: 60
+  onhand: 42        # equipment shortfall -> drives the rating down
+  serviceable: 30   # of those on-hand, how many are mission-capable
+
+training:
+  mission_essential_tasks_trained: 11
+  mission_essential_tasks_total: 12
