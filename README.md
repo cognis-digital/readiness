@@ -16,7 +16,7 @@
 </div>
 
 ```bash
-pip install cognis-readiness
+pip install "git+https://github.com/cognis-digital/readiness.git"
 readiness scan .            # → prioritized findings in seconds
 ```
 
@@ -51,7 +51,7 @@ Compute unit readiness (C-ratings style) from a personnel/equipment/training YAM
 ## Quick start
 
 ```bash
-pip install cognis-readiness
+pip install "git+https://github.com/cognis-digital/readiness.git"
 readiness --version
 readiness scan .                       # scan current project
 readiness scan . --format json         # machine-readable
