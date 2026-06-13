@@ -20,6 +20,12 @@ pip install "git+https://github.com/cognis-digital/readiness.git"
 readiness scan .            # → prioritized findings in seconds
 ```
 
+<!-- cognis:layman:start -->
+## What is this?
+
+Readiness is a command-line tool that scores how prepared a military unit is by reading a simple data file you fill in with numbers: how many people you have, how much equipment is on hand and working, and how many training tasks have been completed. It outputs a C-rating from C-1 (fully ready) to C-5 (not deployable) for each area and for the unit overall, along with a plain list of gaps showing exactly what is short and by how much. It is useful for anyone who manages unit readiness reporting and wants an instant, repeatable assessment without a spreadsheet or a paperwork-heavy process.
+<!-- cognis:layman:end -->
+
 ## Contents
 
 - [Why readiness?](#why) · [Features](#features) · [Quick start](#quick-start) · [Example](#example) · [Architecture](#architecture) · [AI stack](#ai-stack) · [How it compares](#how-it-compares) · [Integrations](#integrations) · [Install anywhere](#install-anywhere) · [Related](#related) · [Contributing](#contributing)
@@ -48,6 +54,42 @@ Compute unit readiness (C-ratings style) from a personnel/equipment/training YAM
 <div align="right"><a href="#top">↑ back to top</a></div>
 
 <a name="quick-start"></a>
+<!-- cognis:install:start -->
+## Install
+
+`readiness` is source-available (not published to PyPI) — every method below installs
+straight from GitHub. Pick whichever you prefer; the one-line scripts auto-detect
+the best tool available on your machine.
+
+**One-liner (Linux / macOS):**
+```sh
+curl -fsSL https://raw.githubusercontent.com/cognis-digital/readiness/HEAD/install.sh | sh
+```
+
+**One-liner (Windows PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/cognis-digital/readiness/HEAD/install.ps1 | iex
+```
+
+**Or install manually — any one of:**
+```sh
+pipx install "git+https://github.com/cognis-digital/readiness.git"     # isolated (recommended)
+uv tool install "git+https://github.com/cognis-digital/readiness.git"  # uv
+pip install "git+https://github.com/cognis-digital/readiness.git"      # pip
+```
+
+**From source:**
+```sh
+git clone https://github.com/cognis-digital/readiness.git
+cd readiness && pip install .
+```
+
+Then run:
+```sh
+readiness --help
+```
+<!-- cognis:install:end -->
+
 ## Quick start
 
 ```bash
