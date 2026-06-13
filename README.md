@@ -20,6 +20,34 @@ pip install cognis-readiness
 readiness scan .            # → prioritized findings in seconds
 ```
 
+## Usage — step by step
+
+1. **Install** (Python 3.9+):
+
+   ```bash
+   pip install readiness            # or: pipx install readiness
+   ```
+
+2. **Assess a readiness file.** Point the `assess` subcommand at a readiness YAML input to compute C-ratings and flag gaps:
+
+   ```bash
+   readiness assess units.yaml
+   ```
+
+3. **Get machine-readable output** for dashboards or further processing with `--format json`:
+
+   ```bash
+   readiness assess units.yaml --format json > readiness.json
+   ```
+
+4. **Read the result.** The report lists each entity's C-rating (1–5, lower is better) and the gaps driving it. In JSON mode, parse the structured findings; the process also returns a non-zero exit code when the overall level is worse than the `--fail-under` threshold (default `3`).
+
+5. **Gate in CI.** Fail the pipeline automatically when readiness slips below your bar:
+
+   ```bash
+   readiness assess units.yaml --fail-under 2   # exit non-zero if overall worse than level 2
+   ```
+
 ## Contents
 
 - [Why readiness?](#why) · [Features](#features) · [Quick start](#quick-start) · [Example](#example) · [Architecture](#architecture) · [AI stack](#ai-stack) · [How it compares](#how-it-compares) · [Integrations](#integrations) · [Install anywhere](#install-anywhere) · [Related](#related) · [Contributing](#contributing)
