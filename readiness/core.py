@@ -12,6 +12,7 @@ so the tool runs with zero install.
 from __future__ import annotations
 
 import json
+import math
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -239,6 +240,8 @@ def _num(d: dict[str, Any], key: str, where: str) -> float:
     val = d[key]
     if not isinstance(val, (int, float)):
         raise ValueError(f"{where}: '{key}' must be a number, got {val!r}")
+    if not math.isfinite(val):
+        raise ValueError(f"{where}: '{key}' must be a finite number, got {val!r}")
     if val < 0:
         raise ValueError(f"{where}: '{key}' must be >= 0")
     return float(val)
@@ -272,6 +275,20 @@ def assess(data: dict[str, Any]) -> UnitReadiness:
     serviceable = _num(e, "serviceable", "equipment")
     met_trained = _num(t, "mission_essential_tasks_trained", "training")
     met_total = _num(t, "mission_essential_tasks_total", "training")
+
+    # Cross-field sanity: serviceable cannot exceed equipment on-hand.
+    if serviceable > onhand:
+        raise ValueError(
+            f"equipment: 'serviceable' ({serviceable:g}) cannot exceed"
+            f" 'onhand' ({onhand:g})"
+        )
+
+    # Cross-field sanity: tasks trained cannot exceed total tasks.
+    if met_trained > met_total and met_total > 0:
+        raise ValueError(
+            f"training: 'mission_essential_tasks_trained' ({met_trained:g})"
+            f" cannot exceed 'mission_essential_tasks_total' ({met_total:g})"
+        )
 
     # serviceable is measured against equipment on-hand (can't service what you
     # don't have); guard divide-by-zero in Area.pct.
