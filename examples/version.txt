@@ -1,0 +1,3 @@
+$ readiness-emit --version
+
+readiness 0.1.0

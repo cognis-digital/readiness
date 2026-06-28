@@ -1,0 +1,13 @@
+$ readiness-emit --help
+
+usage: readiness [-h] [--version] {assess} ...
+
+SORTS-style unit readiness as code (defensive/analytical).
+
+positional arguments:
+  {assess}
+    assess    compute C-ratings and flag gaps
+
+options:
+  -h, --help  show this help message and exit
+  --version   show program's version number and exit

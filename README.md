@@ -20,6 +20,60 @@ pip install cognis-readiness
 readiness scan .            # → prioritized findings in seconds
 ```
 
+
+<!-- cognis:example:start -->
+## 🔎 Example output
+
+Real, reproducible output from the tool — runs offline:
+
+```console
+$ readiness-emit --version
+readiness 0.1.0
+```
+
+```console
+$ readiness-emit --help
+usage: readiness [-h] [--version] {assess} ...
+
+SORTS-style unit readiness as code (defensive/analytical).
+
+positional arguments:
+  {assess}
+    assess    compute C-ratings and flag gaps
+
+options:
+  -h, --help  show this help message and exit
+  --version   show program's version number and exit
+```
+
+> Blocks above are real `readiness` output — reproduce them from a clone.
+
+**Sample result format** _(illustrative values — run on your own data for real findings):_
+
+```
+{
+"readiness": {
+"platform": "stix",
+"findings": [
+{
+"id": "1234567890",
+"name": "Example Finding 1",
+"description": "This is an example finding.",
+"created_by": "John Doe"
+},
+{
+"id": "2345678901",
+"name": "Example Finding 2",
+"description": "This is another example finding.",
+"created_by": "Jane Smith"
+}
+]
+}
+}
+```
+
+<!-- cognis:example:end -->
+
 ## Usage — step by step
 
 1. **Install** (Python 3.9+):
